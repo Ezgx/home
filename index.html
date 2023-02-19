@@ -3,6 +3,11 @@
     <link rel="shortcut icon" href="https://ezgx.tk/img/avatar.png" type="image/x-icon">
     <head>
         <style>
+            :root {
+                --cbx-box-shadow: 0px 0px 0px 1px #c2c2c2;
+                --cbx-main-color: #2f00ff;
+                --cbx-hover-color: #83d2ff;
+            }
             * {
                 margin: 0px;
                 padding: 0px;
@@ -13,12 +18,12 @@
                 font-size: 100px;
                 text-align: center;
                 margin-top: 200px;
-                color: azure;
+                color: var(--cbx-main-color);
                 margin-bottom: 200px;
-                text-shadow: 0px 0px 10px #ffffff;
+                text-shadow: 0px 0px 10px var(--cbx-main-color);
             }
             body {
-                background: url(./04.jpg) no-repeat;
+                background: url(https://cdn.yunyoujun.cn/img/bg/stars-timing-0-blur-30px.jpg) no-repeat;
                 background-attachment: fixed;
                 background-size: cover;
                 font-family: main;
@@ -32,6 +37,8 @@
                 max-width: 1050px;
                 margin: auto;
                 margin-bottom: 40px;
+                padding: 20px;
+                box-shadow: var(--cbx-box-shadow);
             }
             #skill {
                 display: block;
@@ -45,11 +52,13 @@
                 padding: 10px;
                 margin-bottom: 10px;
                 background: #ffffff80;
-                width: 40%;
+                box-shadow: var(--cbx-box-shadow);
+                width: 40%; 
             }
             #skill div p progress {
                 width: 100%;
                 max-width: 400px;
+                color: var(--cbx-main-color);
             }
             #desc {
                 display: block;
@@ -63,6 +72,7 @@
                 background: #ffffff80;
                 height: 100px;
                 margin-top: 20px;
+                box-shadow: var(--cbx-box-shadow);
                 margin: 10px;
             }
             #avatar {
@@ -81,16 +91,22 @@
                 display: inline-block;
             }
             #nav div:hover {
-                background: whitesmoke;
+                background: var(--cbx-hover-color);
+                width: 120%;
+                max-width: 300px;
             }
             #nav div {
                 display: inline-block;
                 border-radius: 20px;
-                padding: 20px;
+                padding: 15px;
                 background: #ffffff80;
                 height: 100px;
                 margin-top: 20px;
-                margin: 10px; 
+                margin: 10px;
+                width: 170px;
+                transition: all .8s cubic-bezier(.65,.15,.37,1.19);
+                max-width: 300px;
+                box-shadow: var(--cbx-box-shadow);
             }
             #nav, #findme {
                 display: block;
@@ -106,9 +122,14 @@
                 margin-top: 20px;
                 margin: 10px;
                 width: 200px;
+                transition: all .8s cubic-bezier(.65,.15,.37,1.19);
+                max-width: 300px;
+                box-shadow: var(--cbx-box-shadow);
             }
             #findme div:hover {
-                background: whitesmoke;
+                background: var(--cbx-hover-color);
+                width: 120%;
+                max-width: 300px;
             }
             @media (max-width: 900px) {
                 buttons {
@@ -122,14 +143,14 @@
                 font-size: 30px;
             }
             buttons div {
-                background-color: rgb(166,169,194);
+                background-color: rgb(241, 241, 241);
                 width: 20px;
                 padding: 10px;
                 margin-bottom: 10px;
                 height: 50px;
                 border-radius: 0px 20px 20px 0px;
                 transition: width .3s;
-                box-shadow: 6px 0px 0px 0px cyan;
+                box-shadow: 6px 0px 0px 0px cyan, var(--cbx-box-shadow) inset;
             }
             buttons div:hover {
                 width: 150px;
@@ -141,7 +162,7 @@
                 visibility: hidden;
             }
             div:hover #buttonsa span {
-                color: rgb(229, 255, 0);
+                color: rgb(0, 0, 0);
                 font-weight: 500;
                 width: 100%;
                 visibility: inherit;
@@ -209,7 +230,6 @@
             }
         </style>
     </head>
-    <div id="bg"></div>
     <header>
         <div>
             <a href="https://ezgx.tk"><h2>
@@ -324,38 +344,38 @@
         <div id="nav">
             <center>
                 <h1 id="sites">我的站点</h1>
-                <a href="https://ezgx.tk">
-                    <div>
+                <div>
+                    <a href="https://ezgx.tk">
                         <h2>
                             博客
                         </h2>
-                        这里记录技术，生活，也是我折腾的地方
-                    </div>
-                </a>
-                <a href="https://b.echocbx.tk">
-                    <div>
+                        这里记录技术，生活.
+                    </a>
+                </div>
+                <div>
+                    <a href="https://b.echocbx.tk">
                         <h2>
                             二次元主页）
                         </h2>
                         瞎折腾【awa】
-                    </div>
-                </a>
-                <a href="https://github.com/ezgx">
-                    <div>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://github.com/ezgx">
                         <h2>
                             github
                         </h2>
-                        我的一些仓库，用来部署各种乱七八糟
-                    </div>
-                </a>
-                <a href="https://ezgx.tk/link">
-                    <div>
+                        用来部署各种东西
+                    </a>
+                </div>
+                <div>
+                    <a href="https://ezgx.tk/link">
                         <h2>
                             友链
                         </h2>
                         一起折腾的朋友们！
-                    </div>
-                </a>
+                    </a>
+                </div>
             </center>
         </div>
         <div id="findme">
@@ -363,27 +383,27 @@
             <h1>
                 联系我
             </h1>
-                <a href="https://github.com/ezgx">
-                    <div>
+                <div>
+                    <a href="https://github.com/ezgx">
                         <h2>
                             github
                         </h2>
-                    </div>
-                </a>
-                <a href="https://ezgx.tk/authorqq">
-                    <div>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://ezgx.tk/authorqq">
                         <h2>
                             QQ
                         </h2>
-                    </div>
-                </a>
-                <a href="https://ezgx.tk/authorwechat">
-                    <div>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://ezgx.tk/authorwechat">
                         <h2>
                             微信
                         </h2>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </center>
         </div>
         <div id="footer">
