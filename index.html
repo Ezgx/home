@@ -91,8 +91,6 @@
             }
             #nav div:hover {
                 background: var(--cbx-hover-color);
-                width: 120%;
-                max-width: 300px;
             }
             #nav div {
                 display: inline-block;
@@ -103,7 +101,6 @@
                 margin-top: 20px;
                 margin: 10px;
                 width: 180px;
-                transition: all .8s cubic-bezier(.65,.15,.37,1.19);
                 max-width: 300px;
                 box-shadow: var(--cbx-box-shadow);
             }
@@ -121,14 +118,27 @@
                 margin-top: 20px;
                 margin: 10px;
                 width: 200px;
-                transition: all .8s cubic-bezier(.65,.15,.37,1.19);
                 max-width: 300px;
                 box-shadow: var(--cbx-box-shadow);
             }
+            @media (min-width: 900px) {
+                #findme div {
+                    transition: all .8s cubic-bezier(.65,.15,.37,1.19);
+                }
+                #findme div:hover {
+                    width: 120%;
+                    max-width: 300px;
+                }
+                #nav div {
+                    transition: all .8s cubic-bezier(.65,.15,.37,1.19);
+                }
+                #nav div:hover {
+                    width: 120%;
+                    max-width: 300px;
+                }
+            }
             #findme div:hover {
                 background: var(--cbx-hover-color);
-                width: 120%;
-                max-width: 300px;
             }
             @media (max-width: 900px) {
                 buttons {
@@ -201,7 +211,7 @@
               cursor: url(https://ezgx.tk/img/cursor/miku2.png), default;
             }
             #footer {
-                width: 100%;
+                width: 80%;
                 margin: auto;
                 max-width: 1200px;
                 background: #ffffff80;
@@ -219,7 +229,7 @@
             header {
                 display: block;
                 position: fixed;
-                background: rgb(166,169,194);
+                background: rgb(241,241,241);
                 box-shadow: 0px 6px 0px 0px cyan;
                 width: 100%;
                 top: 0px;
