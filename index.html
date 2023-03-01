@@ -153,21 +153,21 @@
             }
             buttons div {
                 background-color: rgb(241, 241, 241);
-                width: 170px;
-                left: -135px;
+                width: 140px;
+                left: -105px;
                 padding: 7px;
                 margin-bottom: 10px;
                 height: 50px;
                 position: relative;
                 border-radius: 0px 15px 15px 0px;
-                transition: all .3s;
+                transition: all .5s;
                 box-shadow: 6px 0px 0px 0px cyan, var(--cbx-box-shadow) inset;
             }
             buttons div:hover {
                 left: 0px;
                 color: black;
             }
-            #buttonsa span{
+            #buttonsa span {
                 object-fit: cover;
                 width: 100%;
                 visibility: hidden;
@@ -215,7 +215,7 @@
             #footer {
                 width: 80%;
                 margin: auto;
-                max-width: 1200px;
+                max-width: 1050px;
                 background: #ffffff80;
                 border-radius: 20px;
                 padding: 20px;
@@ -239,6 +239,50 @@
             header div {
                 display: inline-block;
                 padding: 20px;
+            }
+            .comments {
+                max-width: 1030px;
+                padding: 30px;
+                background: #ffffff80;
+                margin: auto;
+                width: 80%;
+                margin-bottom: 40px;
+                box-shadow: var(--cbx-box-shadow);
+                border-radius: 20px;
+            }
+            .el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(1):before {
+                content: '输入QQ号会自动获取昵称和头像🐧'
+            }
+            .el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(2):before {
+                content: '博主暂时未设置邮箱通知功能，请留意评论的文章书否被回复。谢谢！'
+            }
+            .el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(3):before {
+                content: '可以通过昵称访问您的网站🔗'
+            }
+            .el-input.el-input--small.el-input-group.el-input-group--prepend:focus-within::before,
+            .el-input.el-input--small.el-input-group.el-input-group--prepend:focus-within::after {
+                display: block
+            }
+            .el-input.el-input--small.el-input-group.el-input-group--prepend::before {
+                display: none;
+                position: absolute;
+                top: -60px;
+                white-space: nowrap;
+                border-radius: 10px;
+                left: 50%;
+                transform: translate(-50%);
+                padding: 14px 18px;
+                background: #444;
+                color: #fff;
+            }
+            .el-input.el-input--small.el-input-group.el-input-group--prepend::after {
+                display: none;
+                content: '';
+                position: absolute;						
+                border: 12px solid transparent;
+                border-top-color: #444;
+                left: 50%;
+                transform: translate(-50%, -48px)
             }
         </style>
     </head>
@@ -465,5 +509,21 @@
                 </a>
             </div>
         </buttons>
+        <div class="comments">
+            <h1>
+                评论
+            </h1>
+            <div id="tcomment"></div>
+            <script src="https://cdn.staticfile.org/twikoo/1.6.10/twikoo.all.min.js"></script>
+            <script>
+                twikoo.init({
+                envId: 'https://twikoo.ezgx.site/', // 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
+                el: '#tcomment', // 容器元素
+                // region: 'ap-guangzhou', // 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
+                // path: location.pathname, // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
+                // lang: 'zh-CN', // 用于手动设定评论区语言，支持的语言列表 https://github.com/imaegoo/twikoo/blob/main/src/client/utils/i18n/index.js
+                })
+            </script>
+        </div>
     </body>
 </html>
