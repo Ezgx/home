@@ -37,209 +37,265 @@
             }
         </style>
         <div id="title">
-            echocbx的主页
+            Echocbx的主页
         </div>
-        <div id="welcome">
-            <h1>
-                彼方为谁，无我有问，九月露湿，待君之前。<br>
-                How lucky to meet you!
-            </h1>
-            <h1>
-                👋你好，我是
-            </h1>
-            <div id="name">
-                <h2>
-                    <div class="name">Echocbx</div>
-                </h2>
-            </div>
-        </div>
-        <div id="desc">
-            <h1 id="about">关于我</h1>
-            <center>
-                <div>
-                    <h2>
-                        是一名
-                    </h2>
-                    学生，博主，又菜又爱的前端爱好者，咸鱼。
-                </div>
-                <div>
-                    <h2>
-                        出生于2008
-                    </h2>
-                    在校生，坐标中国北京
-                </div>
-                <p>
-                    <img id="avatar" src="https://ezgx.site/img/avatar.png" width="200px" height="200px">
-                </p>
-            </center>
-        </div>
-        <div id="skill">
-            <center>
-                <h1 id="sites">多边形战士（雾</h1>
-                <div>
-                    <p> 
-                        <label for="file">html：</label>
-                        <progress max="100" value="50"> 50% </progress>
-                    </p>
-                    <p>
-                        <label for="file">css：</label>
-                        <progress max="100" value="40"> 40% </progress>
-                    </p>
-                    <p> 
-                        <label for="file">扒站：</label>
-                        <progress max="100" value="50"> 50% </progress>
-                    </p>
-                    <p> 
-                        <label for="file">抄教程：</label>
-                        <progress max="100" value="80"> 80% </progress>
-                    </p>
-                    <p>
-                        <label for="file">整活：</label>
-                        <progress max="100" value="70"> 70% </progress>
-                    </p>
-                    <p>
-                        <label for="file">二次元：</label>
-                        <progress max="100" value="100"> 100% </progress>
-                    </p>
-                    <p>
-                        <label for="file">肝帝：</label>
-                        <progress max="100" value="60"> 60% </progress>
-                    </p>
-                    <p>
-                        <label for="file">学畜：</label>
-                        <progress max="100" value="90"> 90% </progress>
-                    </p>
-                </div>
-            </center>
-        </div>
-        <div id="nav">
-            <center>
-                <h1 id="sites">我的站点</h1>
-                <a href="https://ezgx.site">
-                    <div>
-                        <h2>
-                            博客
-                        </h2>
-                        这里记录技术，生活.
-                    </div>
-                </a>
-                <a href="https://home2.ezgx.site/">
-                    <div>
-                        <h2>
-                            二次元主页）
-                        </h2>
-                        瞎折腾【awa】
-                    </div>
-                </a>
-                <a href="https://github.com/ezgx">
-                    <div>
-                        <h2>
-                            github
-                        </h2>
-                        用来部署各种东西
-                    </div>
-                </a>
-                <a href="https://ezgx.site/link">
-                    <div>
-                        <h2>
-                            友链
-                        </h2>
-                        一起折腾的朋友们！
-                    </div>
-                </a>
-            </center>
-        </div>
-        <div id="findme">
-            <center>
-            <h1>
-                哪里有我？
-            </h1>
-                <a href="https://github.com/ezgx">
-                    <div>
-                        <h2>
-                            github
-                        </h2>
-                    </div>
-                </a>
-                <a href="https://ezgx.site/authorqq">
-                    <div>
-                        <h2>
-                            QQ
-                        </h2>
-                    </div>
-                </a>
-                <a href="https://ezgx.site/authorwechat">
-                    <div>
-                        <h2>
-                            微信
-                        </h2>
-                    </div>
-                </a>
-            </center>
-        </div>
-        <div id="footer">
-            <center>
+            <section class="main-hero-waves-area waves-area">
+                <svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path>
+                </defs>
+                <g class="parallax">
+                    <use href="#gentle-wave" x="48" y="0"></use>
+                    <use href="#gentle-wave" x="48" y="3"></use>
+                    <use href="#gentle-wave" x="48" y="5"></use>
+                    <use href="#gentle-wave" x="48" y="7"></use>
+                </g>
+                </svg>
+            </section>
+          <div id="main">
+            <style>
+                body #main {
+                    background: #ffffffbd;
+                    padding-bottom: 30px;
+                    padding-top: 30px;
+                    margin-bottom: -30px;
+                }
+                /* 波浪css */
+                .main-hero-waves-area {
+                    width: 100%;
+                    z-index: 5;
+                }
+                .waves-area .waves-svg {
+                    width: 100%;
+                    height: 5rem;
+                }
+                /* Animation */
+
+                .parallax > use {
+                    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+                }
+                .parallax > use:nth-child(1) {
+                    animation-delay: -2s;
+                    animation-duration: 7s;
+                    fill: #ffffff71;
+                }
+                .parallax > use:nth-child(2) {
+                    animation-delay: -3s;
+                    animation-duration: 10s;
+                    fill: #ffffff5b;
+                }
+                .parallax > use:nth-child(3) {
+                    animation-delay: -4s;
+                    animation-duration: 13s;
+                    fill: #ffffff36;
+                }
+                .parallax > use:nth-child(4) {
+                    animation-delay: -5s;
+                    animation-duration: 20s;
+                    fill: #ffffff11;
+                }
+                @keyframes move-forever {
+                    0% {
+                        transform: translate3d(-90px, 0, 0);
+                    }
+                    100% {
+                        transform: translate3d(85px, 0, 0);
+                    }
+                    }
+                /*Shrinking for mobile*/
+                @media (max-width: 768px) {
+                    .waves-area .waves-svg {
+                        height: 40px;
+                        min-height: 40px;
+                    }
+                }
+            </style>
+            <div id="welcome">
                 <h1>
-                    2023 by ©<a href="https://echocbx.tk/">echocbx</a>
+                    彼方为谁，无我有问，九月露湿，待君之前。<br>
+                    How lucky to meet you!
                 </h1>
-                <h2>
-                    <a href="https://github.com/Ezgx/home">下载此主页模板源码</a>
-                </h2>
-            </center>
-        </div>
-        <buttons>
-            <div>
-                <a id="buttonsa" href="https://ezgx.site">
-                    <span>
-                        博客
-                    </span>
-                </a>
+                <h1>
+                    👋你好，我是
+                </h1>
+                <div id="name">
+                    <h2>
+                        <div class="name">Echocbx</div>
+                    </h2>
+                </div>
             </div>
-            <div>
-                <a id="buttonsa" href="https://home2.ezgx.site/">
-                    <span>
-                        主页2
-                    </span>
-                </a>
+            <div id="desc">
+                <h1 id="about">关于我</h1>
+                <center>
+                    <div>
+                        <h2>
+                            是一名
+                        </h2>
+                        学生，博主，又菜又爱的前端爱好者，咸鱼。
+                    </div>
+                    <div>
+                        <h2>
+                            出生于2008
+                        </h2>
+                        在校生，坐标中国北京
+                    </div>
+                    <p>
+                        <img id="avatar" src="https://ezgx.site/img/avatar.png" width="200px" height="200px">
+                    </p>
+                </center>
             </div>
-            <div>
-                <a id="buttonsa" href="https://github.com/ezgx">
-                    <span>
-                        github
-                    </span>
-                </a>
+            <div id="skill">
+                <center>
+                    <h1 id="sites">多边形战士（雾</h1>
+                    <div>
+                        <p> 
+                            <label for="file">html：</label>
+                            <progress max="100" value="50"> 50% </progress>
+                        </p>
+                        <p>
+                            <label for="file">css：</label>
+                            <progress max="100" value="40"> 40% </progress>
+                        </p>
+                        <p> 
+                            <label for="file">扒站：</label>
+                            <progress max="100" value="50"> 50% </progress>
+                        </p>
+                        <p> 
+                            <label for="file">抄教程：</label>
+                            <progress max="100" value="80"> 80% </progress>
+                        </p>
+                        <p>
+                            <label for="file">整活：</label>
+                            <progress max="100" value="70"> 70% </progress>
+                        </p>
+                        <p>
+                            <label for="file">二次元：</label>
+                            <progress max="100" value="100"> 100% </progress>
+                        </p>
+                        <p>
+                            <label for="file">肝帝：</label>
+                            <progress max="100" value="60"> 60% </progress>
+                        </p>
+                        <p>
+                            <label for="file">学畜：</label>
+                            <progress max="100" value="90"> 90% </progress>
+                        </p>
+                    </div>
+                </center>
             </div>
-            <div>
-                <a id="buttonsa" href="https://ezgx.site/authorqq">
-                    <span>
-                        QQ
-                    </span>
-                </a>
+            <div id="nav">
+                <center>
+                    <h1 id="sites">我的站点</h1>
+                    <a href="https://ezgx.site">
+                        <div>
+                            <h2>
+                                博客
+                            </h2>
+                            这里记录技术，生活.
+                        </div>
+                    </a>
+                    <a href="https://home2.ezgx.site/">
+                        <div>
+                            <h2>
+                                二次元主页）
+                            </h2>
+                            瞎折腾【awa】
+                        </div>
+                    </a>
+                    <a href="https://github.com/ezgx">
+                        <div>
+                            <h2>
+                                github
+                            </h2>
+                            用来部署各种东西
+                        </div>
+                    </a>
+                    <a href="https://ezgx.site/link">
+                        <div>
+                            <h2>
+                                友链
+                            </h2>
+                            一起折腾的朋友们！
+                        </div>
+                    </a>
+                </center>
             </div>
-            <div>
-                <a id="buttonsa" href="https://ezgx.site/authorwechat">
-                    <span>
-                        微信
-                    </span>
-                </a>
+            <div id="findme">
+                <center>
+                <h1>
+                    哪里有我？
+                </h1>
+                    <a href="https://github.com/ezgx">
+                        <div>
+                            <h2>
+                                github
+                            </h2>
+                        </div>
+                    </a>
+                    <a href="https://ezgx.site/authorqq">
+                        <div>
+                            <h2>
+                                QQ
+                            </h2>
+                        </div>
+                    </a>
+                    <a href="https://ezgx.site/authorwechat">
+                        <div>
+                            <h2>
+                                微信
+                            </h2>
+                        </div>
+                    </a>
+                </center>
             </div>
-        </buttons>
-        <div class="comments">
-            <h1>
-                评论
-            </h1>
-            <div id="tcomment"></div>
-            <script src="https://cdn.staticfile.org/twikoo/1.6.10/twikoo.all.min.js"></script>
-            <script>
-                twikoo.init({
-                envId: 'https://twikoo.ezgx.site/', // 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
-                el: '#tcomment', // 容器元素
-                // region: 'ap-guangzhou', // 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
-                // path: location.pathname, // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
-                // lang: 'zh-CN', // 用于手动设定评论区语言，支持的语言列表 https://github.com/imaegoo/twikoo/blob/main/src/client/utils/i18n/index.js
-                })
-            </script>
-        </div>
+            <div id="footer">
+                <center>
+                    <h1>
+                        2023 by ©<a href="https://echocbx.tk/">echocbx</a>
+                    </h1>
+                    <h2>
+                        <a href="https://github.com/Ezgx/home">下载此主页模板源码</a>
+                    </h2>
+                </center>
+            </div>
+            <buttons>
+                <div>
+                    <a id="buttonsa" href="https://ezgx.site">
+                        <span>
+                            博客
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <a id="buttonsa" href="https://home2.ezgx.site/">
+                        <span>
+                            主页2
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <a id="buttonsa" href="https://github.com/ezgx">
+                        <span>
+                            github
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <a id="buttonsa" href="https://ezgx.site/authorqq">
+                        <span>
+                            QQ
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <a id="buttonsa" href="https://ezgx.site/authorwechat">
+                        <span>
+                            微信
+                        </span>
+                    </a>
+                </div>
+            </buttons>
+          </div>
         <style>
             :root {
                 --cbx-box-shadow: 0px 0px 0px 1px #c2c2c2;
@@ -255,13 +311,15 @@
                 font-weight: 300;
                 font-size: 100px;
                 text-align: center;
-                margin-top: 200px;
-                color: var(--cbx-main-color);
-                margin-bottom: 200px;
-                text-shadow: 0px 0px 10px var(--cbx-main-color);
+                background: linear-gradient(to left, #ff4500, #ffa500, #ffd700, #90ee90, #0ff, #1e90ff, #9370db, #ff69b4, #ff4500);
+                height: 32vh;
+                padding-top: 20vh;
+                -webkit-background-clip: text;
+                color: transparent;
+                text-shadow: 0 0 40px #aaa;
             }
             body {
-                background: url(https://cdn.yunyoujun.cn/img/bg/stars-timing-0-blur-30px.jpg) no-repeat;
+                background: url(https://wlopck.gitee.io/img/11.jpg) no-repeat center center;
                 background-attachment: fixed;
                 background-size: cover;
                 font-family: main;
@@ -277,6 +335,8 @@
                 margin-bottom: 40px;
                 padding: 20px;
                 box-shadow: var(--cbx-box-shadow);
+                backdrop-filter: saturate(100%) blur(10px);
+                --webkit-backdrop-filter: saturate(100%) blur(20px);
             }
             #skill {
                 display: block;
@@ -291,6 +351,8 @@
                 margin-bottom: 10px;
                 background: #ffffff80;
                 box-shadow: var(--cbx-box-shadow);
+                backdrop-filter: saturate(100%) blur(10px);
+                --webkit-backdrop-filter: saturate(100%) blur(20px);
                 width: 40%; 
             }
             #skill div p progress {
@@ -306,6 +368,8 @@
                 display: inline-block;
                 border-radius: 20px;
                 padding: 20px;
+                backdrop-filter: saturate(100%) blur(10px);
+                --webkit-backdrop-filter: saturate(100%) blur(20px);
                 background: #ffffff80;
                 height: 100px;
                 margin-top: 20px;
@@ -341,6 +405,8 @@
                 width: 180px;
                 max-width: 300px;
                 box-shadow: var(--cbx-box-shadow);
+                backdrop-filter: saturate(100%) blur(10px);
+                --webkit-backdrop-filter: saturate(100%) blur(20px);
             }
             #nav, #findme {
                 display: block;
@@ -358,22 +424,8 @@
                 width: 200px;
                 max-width: 300px;
                 box-shadow: var(--cbx-box-shadow);
-            }
-            @media (min-width: 900px) {
-                #findme div {
-                    transition: all .8s;
-                }
-                #findme div:hover {
-                    width: 120%;
-                    max-width: 300px;
-                }
-                #nav div {
-                    transition: all .8s;
-                }
-                #nav div:hover {
-                    width: 120%;
-                    max-width: 300px;
-                }
+                backdrop-filter: saturate(100%) blur(10px);
+                --webkit-backdrop-filter: saturate(100%) blur(20px);
             }
             #findme div:hover {
                 background: var(--cbx-hover-color);
@@ -385,6 +437,7 @@
             }
             buttons {
                 position: fixed;
+                z-index: 20;
                 top: 10vh;
                 text-align: left;
                 font-size: 30px;
@@ -398,7 +451,7 @@
                 height: 50px;
                 position: relative;
                 border-radius: 0px 15px 15px 0px;
-                transition: all .5s;
+                transition: all .3s;
                 box-shadow: 6px 0px 0px 0px cyan, var(--cbx-box-shadow) inset;
             }
             buttons div:hover {
@@ -460,6 +513,8 @@
                 margin-top: 30px;
                 margin-bottom: 40px;
                 box-shadow: var(--cbx-box-shadow);
+                backdrop-filter: saturate(100%) blur(10px);
+                --webkit-backdrop-filter: saturate(100%) blur(20px);
             }
             @media (min-width: 900px) {
                 header {
@@ -467,8 +522,9 @@
                 }
             }
             header {
-                display: block;
+                display: flex;
                 position: fixed;
+                z-index: 20;
                 background: rgb(241,241,241);
                 box-shadow: 0px 6px 0px 0px cyan;
                 width: 100%;
