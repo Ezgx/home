@@ -1,0 +1,285 @@
+
+body #main {
+    background: #ffffffbd;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    margin-bottom: -30px;
+}
+/* 波浪css */
+.main-hero-waves-area {
+    width: 100%;
+    z-index: 5;
+}
+.waves-area .waves-svg {
+    width: 100%;
+    height: 5rem;
+}
+/* Animation */
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+    fill: #ffffff71;
+}
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+    fill: #ffffff5b;
+}
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+    fill: #ffffff36;
+}
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+    fill: #ffffff11;
+}
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+    }
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+    .waves-area .waves-svg {
+        height: 40px;
+        min-height: 40px;
+    }
+}
+
+:root {
+    --cbx-box-shadow: 0px 0px 0px 1px #c2c2c2;
+    --cbx-main-color: #2f00ff;
+    --cbx-hover-color: #83d2ff;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    user-select: none;
+}
+#title {
+    font-weight: 300;
+    font-size: 100px;
+    text-align: center;
+    height: 32vh;
+    padding-top: 20vh;
+    text-shadow: 2px 2px #000,2px -2px #000;
+    color: #fff;
+}
+body {
+    background: url(https://pic.imgdb.cn/item/64160cbfa682492fcc81bc40.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: main;
+}
+#welcome {
+    text-align: center;
+    margin-bottom: 60px;
+    background: #ffffff80;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 1050px;
+    margin: auto;
+    margin-bottom: 40px;
+    padding: 20px;
+    box-shadow: var(--cbx-box-shadow);
+    backdrop-filter: saturate(100%) blur(10px);
+    --webkit-backdrop-filter: saturate(100%) blur(20px);
+}
+#skill {
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+#skill div p {
+    display: inline-block;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #ffffff80;
+    box-shadow: var(--cbx-box-shadow);
+    backdrop-filter: saturate(100%) blur(10px);
+    --webkit-backdrop-filter: saturate(100%) blur(20px);
+    width: 40%; 
+}
+#skill div p progress {
+    width: 100%;
+    max-width: 400px;
+}
+#desc {
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+#desc div {
+    display: inline-block;
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: saturate(100%) blur(10px);
+    --webkit-backdrop-filter: saturate(100%) blur(20px);
+    background: #ffffff80;
+    height: 100px;
+    margin-top: 20px;
+    box-shadow: var(--cbx-box-shadow);
+    margin: 10px;
+}
+#avatar {
+    margin-bottom: -100px;
+    border-radius: 1000px;
+}
+.name {
+    color: black;
+}
+#sites, #about {
+    text-align: center;
+    margin: auto;
+    max-width: 1200px;
+}
+#desc p {
+    display: inline-block;
+}
+#nav div:hover {
+    background: var(--cbx-hover-color);
+}
+#nav div {
+    display: inline-block;
+    border-radius: 20px;
+    padding: 15px;
+    background: #ffffff80;
+    height: 100px;
+    margin-top: 20px;
+    margin: 10px;
+    width: 180px;
+    max-width: 300px;
+    box-shadow: var(--cbx-box-shadow);
+    backdrop-filter: saturate(100%) blur(10px);
+    --webkit-backdrop-filter: saturate(100%) blur(20px);
+}
+#nav, #findme {
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+#findme div {
+    display: inline-block;
+    border-radius: 20px;
+    padding: 20px;
+    background: #ffffff80;
+    height: 50px;
+    margin-top: 20px;
+    margin: 10px;
+    width: 200px;
+    max-width: 300px;
+    box-shadow: var(--cbx-box-shadow);
+    backdrop-filter: saturate(100%) blur(10px);
+    --webkit-backdrop-filter: saturate(100%) blur(20px);
+}
+#findme div:hover {
+    background: var(--cbx-hover-color);
+}
+@media (max-width: 900px) {
+    buttons {
+        visibility: hidden;
+    }
+}
+buttons {
+    position: fixed;
+    z-index: 20;
+    top: 10vh;
+    text-align: left;
+    font-size: 30px;
+}
+buttons div {
+    background-color: rgb(241, 241, 241);
+    width: 140px;
+    left: -105px;
+    padding: 7px;
+    margin-bottom: 10px;
+    height: 50px;
+    position: relative;
+    border-radius: 0px 15px 15px 0px;
+    transition: all .3s;
+    box-shadow: 6px 0px 0px 0px cyan, var(--cbx-box-shadow) inset;
+}
+buttons div:hover {
+    left: 0px;
+    color: black;
+}
+#buttonsa span {
+    object-fit: cover;
+    width: 100%;
+    visibility: hidden;
+}
+div:hover #buttonsa span {
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    width: 100%;
+    visibility: inherit;
+    object-fit: cover;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    color: blue;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: rgba(73, 177, 245, 0.2);
+  border-radius: 2em;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #49b1f5;
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.4) 75%, transparent 75%, transparent);
+  border-radius: 2em;
+}
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+::-moz-selection {
+  color: #fff;
+  background-color: #49b1f5;
+}
+body {
+  cursor: url(https://uu.sssu.us/img/cursor/miku1.png), default;
+}
+a, img {
+  cursor: url(https://uu.sssu.us/img/cursor/miku2.png), default;
+}
+#footer {
+    width: 80%;
+    margin: auto;
+    max-width: 1050px;
+    background: #ffffff80;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    box-shadow: var(--cbx-box-shadow);
+    backdrop-filter: saturate(100%) blur(10px);
+    --webkit-backdrop-filter: saturate(100%) blur(20px);
+}
+
+.comments {
+    max-width: 1030px;
+    padding: 30px;
+    background: #ffffff80;
+    margin: auto;
+    width: 80%;
+    margin-bottom: 40px;
+    box-shadow: var(--cbx-box-shadow);
+    border-radius: 20px;
+}
